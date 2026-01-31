@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Your Stream</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<header>
+    <h1>Select Your Stream <br> ඔයාගේ විශය ධාරාව තෝරන්න</h1>
+</header>
+
+<div class="container">
+
+    <!-- STREAM BUTTONS -->
+    <div class="button-group">
+        <button class="btn" onclick="showSubjects('maths')">Maths</button>
+        <button class="btn" onclick="showSubjects('bio')">Bio</button>
+        <button class="btn" onclick="showSubjects('commerce')">Commerce</button>
+        <button class="btn" onclick="showSubjects('tech')">Tech</button>
+        <button class="btn" onclick="showSubjects('art')">ART</button>
+        <button class="btn" onclick="showSubjects('ict')">ICT</button>
+    </div>
+
+    <!-- SUBJECT SECTIONS -->
+
+    <!-- MATHS -->
+    <div id="maths" class="card hidden">
+        <h3>Maths Stream – Select Subject</h3>
+        <div class="button-group">
+            <button class="btn" onclick="showYears()">Physics</button>
+            <button class="btn" onclick="showYears()">Com.Maths</button>
+            <button class="btn" onclick="showYears()">Chemistry</button>
+        </div>
+    </div>
+
+    <!-- BIO -->
+    <div id="bio" class="card hidden">
+        <h3>Bio Stream – Select Subject</h3>
+        <div class="button-group">
+            <button class="btn" onclick="showYears()">Physics</button>
+            <button class="btn" onclick="showYears()">Chemistry</button>
+            <button class="btn" onclick="showYears()">Biology</button>
+        </div>
+    </div>
+
+    <!-- COMMERCE -->
+    <div id="commerce" class="card hidden">
+        <h3>Commerce Stream – Select Subject</h3>
+        <div class="button-group">
+            <button class="btn" onclick="showYears()">Accounting</button>
+            <button class="btn" onclick="showYears()">Business Studies</button>
+            <button class="btn" onclick="showYears()">Economics</button>
+        </div>
+    </div>
+
+    <!-- TECH -->
+    <div id="tech" class="card hidden">
+        <h3>Technology Stream – Select Subject</h3>
+        <div class="button-group">
+            <button class="btn" onclick="showYears()">ET</button>
+            <button class="btn" onclick="showYears()">BST</button>
+            <button class="btn" onclick="showYears()">ICT</button>
+        </div>
+    </div>
+
+    <!-- ART -->
+    <div id="art" class="card hidden">
+        <h3>ART Stream – Select Subject</h3>
+        <div class="button-group">
+            <button class="btn" onclick="showYears()">Geography</button>
+            <button class="btn" onclick="showYears()">History</button>
+            <button class="btn" onclick="showYears()">Political Science</button>
+            <button class="btn" onclick="showYears()">Media Studies</button>
+        </div>
+    </div>
+
+    <!-- ICT (NORMAL STREAM) -->
+    <div id="ict" class="card hidden">
+        <h3>ICT Stream – Select Category</h3>
+        <div class="button-group">
+            <button class="btn" onclick="showYears()">Theory</button>
+            <button class="btn" onclick="showYears()">Practical</button>
+            <button class="btn" onclick="showYears()">Short Notes</button>
+        </div>
+    </div>
+
+    <!-- YEARS -->
+    <div id="years" class="card hidden">
+        <h3>Select Year</h3>
+        <div class="button-group">
+            <a class="btn" href="#">2010</a>
+            <a class="btn" href="#">2011</a>
+            <a class="btn" href="#">2012</a>
+            <a class="btn" href="#">2013</a>
+            <a class="btn" href="#">2014</a>
+            <a class="btn" href="#">2015</a>
+            <a class="btn" href="#">2016</a>
+            <a class="btn" href="#">2017</a>
+            <a class="btn" href="#">2018</a>
+            <a class="btn" href="#">2019</a>
+            <a class="btn" href="#">2020</a>
+            <a class="btn" href="#">2021</a>
+            <a class="btn" href="#">2022</a>
+            <a class="btn" href="#">2023</a>
+            <a class="btn" href="#">2024</a>
+            <a class="btn" href="#">2025</a>
+        </div>
+        <p>Select year of you need.</p>
+    </div>
+
+</div>
+<hr size="50">
+
+<div class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="streams.html">PDF Download</a>
+    <a href="notes.html">Short / Notes</a>
+    <a href="about.html">About Us</a>
+</div>
+
+
+<footer>
+    © 2026 සිසු පියස
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+    function hideAllSubjects() {
+        const sections = document.querySelectorAll('.card');
+        sections.forEach(section => section.classList.add('hidden'));
+    }
+
+    function showSubjects(id) {
+        hideAllSubjects();
+        document.getElementById(id).classList.remove('hidden');
+    }
+
+    function showYears() {
+        document.getElementById('years').classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
